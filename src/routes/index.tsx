@@ -14,9 +14,8 @@ export const Route = createFileRoute("/")({
       { name: "description", content: "Enterprise software, AI, cloud, and digital transformation by AxonCore Technologies." },
       { property: "og:title", content: `${company.name} — ${company.tagline}` },
       { property: "og:description", content: company.description },
-      { property: "og:image", content: "/qr.png" },
-      { rel: "canonical", href: "/" } as never,
     ],
+    links: [{ rel: "canonical", href: "/" }],
   }),
   component: Home,
 });
