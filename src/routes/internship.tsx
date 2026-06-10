@@ -74,11 +74,12 @@ function InternshipPage() {
               }
               const ins = await supabase
                 .from("internship_applications")
-                .insert({ ...parsed.data, resume_url })
-                .select("id, email")
-                .single();
+                .insert({ ...parsed.data, resume_url });
               if (ins.error) throw ins.error;
-              sessionStorage.setItem("axon_application", JSON.stringify({ id: ins.data.id, email: ins.data.email }));
+              sessionStorage.setItem(
+                "axon_application",
+                JSON.stringify({ email: parsed.data.email, full_name: parsed.data.full_name, position: parsed.data.position })
+              );
               toast.success("Application received! Complete enrollment payment.");
               navigate({ to: "/payment" });
             } catch (err) {
