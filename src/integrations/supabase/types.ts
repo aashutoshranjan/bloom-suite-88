@@ -14,7 +14,92 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      internship_applications: {
+        Row: {
+          college: string
+          created_at: string
+          email: string
+          full_name: string
+          id: string
+          location: string
+          mobile: string
+          notes: string | null
+          position: string
+          qualification: string
+          resume_url: string | null
+          start_date: string | null
+          status: string
+        }
+        Insert: {
+          college: string
+          created_at?: string
+          email: string
+          full_name: string
+          id?: string
+          location: string
+          mobile: string
+          notes?: string | null
+          position: string
+          qualification: string
+          resume_url?: string | null
+          start_date?: string | null
+          status?: string
+        }
+        Update: {
+          college?: string
+          created_at?: string
+          email?: string
+          full_name?: string
+          id?: string
+          location?: string
+          mobile?: string
+          notes?: string | null
+          position?: string
+          qualification?: string
+          resume_url?: string | null
+          start_date?: string | null
+          status?: string
+        }
+        Relationships: []
+      }
+      payment_submissions: {
+        Row: {
+          applicant_email: string | null
+          application_id: string | null
+          created_at: string
+          id: string
+          screenshot_url: string | null
+          status: string
+          transaction_id: string
+        }
+        Insert: {
+          applicant_email?: string | null
+          application_id?: string | null
+          created_at?: string
+          id?: string
+          screenshot_url?: string | null
+          status?: string
+          transaction_id: string
+        }
+        Update: {
+          applicant_email?: string | null
+          application_id?: string | null
+          created_at?: string
+          id?: string
+          screenshot_url?: string | null
+          status?: string
+          transaction_id?: string
+        }
+        Relationships: [
+          {
+            foreignKeyName: "payment_submissions_application_id_fkey"
+            columns: ["application_id"]
+            isOneToOne: false
+            referencedRelation: "internship_applications"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
     }
     Views: {
       [_ in never]: never
