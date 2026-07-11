@@ -1,12 +1,12 @@
 // Centralized company information — edit this file to update site-wide content.
 export const company = {
-  name: "AxonCore Technologies",
-  shortName: "AxonCore",
-  domain: "axonbloom.com",
+  name: "Uplayers Recruit",
+  shortName: "Uplayers",
+  domain: "uplayersrecruit.in",
   tagline: "Innovating Tomorrow's Digital Future",
   description:
-    "AxonCore Technologies builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
-  email: "support@axonbloom.com",
+    "Uplayers Recruit builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
+  email: "support@uplayersrecruit.in",
   whatsapp: "+91 90608 86915",
   whatsappRaw: "919060886915",
   address: {
