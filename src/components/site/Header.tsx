@@ -19,7 +19,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 group">
           <span className="grid h-9 w-9 place-items-center rounded-lg bg-[image:var(--gradient-brand)] text-white font-bold shadow-glow group-hover:scale-105 transition-transform">A</span>
-          <span className="font-display text-lg font-semibold tracking-tight">{company.shortName}<span className="text-muted-foreground font-normal">Core</span></span>
+          <span className="font-display text-lg font-semibold tracking-tight">{company.shortName}<span className="text-muted-foreground font-normal">Recruit</span></span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">
           {nav.map((n) => (
