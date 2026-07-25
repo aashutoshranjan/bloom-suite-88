@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: `${company.name} — ${company.tagline}` },
-      { name: "description", content: "Enterprise software, AI, cloud, and digital transformation by Uplayers Recruit." },
+      { name: "description", content: "Enterprise software, AI, cloud, and digital transformation by AxonBloom Ventures." },
       { property: "og:title", content: `${company.name} — ${company.tagline}` },
       { property: "og:description", content: company.description },
     ],
