@@ -18,7 +18,6 @@ import {
   Phone,
   Briefcase,
   CalendarDays,
-  Hash,
 } from "lucide-react";
 import { company } from "@/lib/company";
 
@@ -41,7 +40,6 @@ function PaymentPage() {
     { icon: Phone, label: "Contact Number" },
     { icon: Briefcase, label: "Internship Position Applied For" },
     { icon: CalendarDays, label: "Preferred Starting Date" },
-    { icon: Hash, label: "Batch Code (as mentioned in your Offer Letter)" },
   ];
 
   const afterVerification = [
