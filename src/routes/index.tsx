@@ -80,7 +80,7 @@ const steps = [
 ];
 
 const testimonials = [
-  { q: "Uplayers Recruit rebuilt our core platform and cut our cloud spend by 38%.", a: "CTO, FinTech scale-up" },
+  { q: "AxonBloom Ventures rebuilt our core platform and cut our cloud spend by 38%.", a: "CTO, FinTech scale-up" },
   { q: "Their AI team shipped a production copilot in 9 weeks. Game-changing.", a: "Head of Product, SaaS" },
   { q: "Truly enterprise-grade engineering. Documentation and SRE were exceptional.", a: "VP Engineering, Healthcare" },
 ];
