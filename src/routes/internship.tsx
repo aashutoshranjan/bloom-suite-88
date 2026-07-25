@@ -27,7 +27,6 @@ const schema = z.object({
   position: z.string().trim().min(2).max(100),
   location: z.string().trim().min(2).max(120),
   start_date: z.string().min(1, "Pick a date"),
-  batch_code: z.string().trim().min(2).max(60),
 });
 
 function InternshipPage() {
@@ -68,7 +67,7 @@ function InternshipPage() {
                 mobile: "-",
                 college: "-",
                 qualification: "-",
-                notes: `Batch Code: ${parsed.data.batch_code}`,
+                notes: "",
               });
               if (ins.error) throw ins.error;
               sessionStorage.setItem(
@@ -77,7 +76,6 @@ function InternshipPage() {
                   email: parsed.data.email,
                   full_name: parsed.data.full_name,
                   position: parsed.data.position,
-                  batch_code: parsed.data.batch_code,
                 })
               );
               toast.success("Application received! Complete enrollment payment.");
@@ -96,7 +94,6 @@ function InternshipPage() {
             <Field label="Internship position" name="position" placeholder="e.g. Frontend Developer Intern" />
             <Field label="Current location" name="location" />
             <Field label="Preferred starting date" name="start_date" type="date" />
-            <Field label="Batch code" name="batch_code" placeholder="As mentioned in your Offer Letter" />
           </div>
           <Button type="submit" disabled={loading} size="lg" className="bg-[image:var(--gradient-brand)] text-white hover:opacity-95 shadow-glow w-fit">
             {loading ? "Submitting…" : "Submit Application"}
