@@ -139,7 +139,7 @@ function Home() {
       {/* WHY CHOOSE */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">Why Uplayers</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">Why AxonBloom</p>
           <h2 className="mt-2 text-4xl md:text-5xl font-bold">Built like a Fortune-500 partner</h2>
           <p className="mt-4 text-muted-foreground">We bring senior engineering, rigorous process, and obsession with outcomes to every engagement.</p>
         </div>
