@@ -10,7 +10,7 @@ export const Route = createFileRoute("/services")({
       { title: `Services — ${company.name}` },
       { name: "description", content: "Custom software, AI, cloud, mobile, ERP, e-commerce, DevOps, security, and digital transformation services." },
       { property: "og:title", content: `Services — ${company.name}` },
-      { property: "og:description", content: "Full-spectrum technology services from AxonBloom Ventures." },
+      { property: "og:description", content: "Full-spectrum technology services from Enerzcloud Ventures." },
     ],
   }),
   component: ServicesPage,
