@@ -1,12 +1,12 @@
 // Centralized company information — edit this file to update site-wide content.
 export const company = {
-  name: "AxonBloom Ventures",
-  shortName: "AxonBloom",
-  domain: "axonbloom.com",
+  name: "Enerzcloud Ventures",
+  shortName: "Enerzcloud",
+  domain: "enerzcloud.com",
   tagline: "Innovating Tomorrow's Digital Future",
   description:
-    "AxonBloom Ventures builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
-  email: "support@axonbloom.com",
+    "Enerzcloud Ventures builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
+  email: "support@enerzcloud.com",
   whatsapp: "+91-9262292190",
   whatsappRaw: "919262292190",
   address: {
