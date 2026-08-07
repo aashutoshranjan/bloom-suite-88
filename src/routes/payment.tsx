@@ -18,6 +18,10 @@ import {
   Phone,
   Briefcase,
   CalendarDays,
+  GraduationCap,
+  BookOpen,
+  ArrowRight,
+  AlertTriangle,
 } from "lucide-react";
 import { company } from "@/lib/company";
 
@@ -91,6 +95,81 @@ function PaymentPage() {
           </div>
         </div>
 
+        {/* Onboarding & LMS Access Instructions */}
+        <Card className="mt-10 p-8 md:p-10 border-border/60">
+          <div className="flex items-start gap-4">
+            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[image:var(--gradient-brand)] text-white shadow-glow">
+              <GraduationCap className="h-6 w-6" />
+            </div>
+            <div>
+              <h2 className="font-display text-2xl md:text-3xl font-semibold">
+                Internship Onboarding &amp; LMS Preview Instructions
+              </h2>
+              <p className="mt-3 text-muted-foreground leading-relaxed">
+                Follow these simple steps to preview your training modules before completing your enrollment payment.
+              </p>
+            </div>
+          </div>
+
+          <ol className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: BookOpen,
+                title: "Sign Up on LMS",
+                desc: "Go to the LMS Portal and click 'Sign Up' to create your Username & Password.",
+                link: { href: "https://lmstraineeprogram.in/", text: "LMS Portal" },
+              },
+              {
+                icon: ArrowRight,
+                title: "Log In & Browse",
+                desc: "Log in with your new credentials, navigate to 'Browse Programs', and select your internship program.",
+              },
+              {
+                icon: KeyRound,
+                title: "Unlock Free Preview",
+                desc: "Use Enrollment Key: admin@12345 to unlock and explore your training modules.",
+              },
+              {
+                icon: CheckCircle2,
+                title: "Complete Registration",
+                desc: "Return here to complete your enrollment payment and secure your seat.",
+              },
+            ].map((step, idx) => (
+              <li
+                key={step.title}
+                className="relative overflow-hidden rounded-2xl border border-border/60 bg-secondary/30 p-5"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
+                    <step.icon className="h-4.5 w-4.5" />
+                  </div>
+                  <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
+                    Step {idx + 1}
+                  </span>
+                </div>
+                <p className="mt-4 font-semibold">{step.title}</p>
+                <p className="mt-1 text-sm text-muted-foreground leading-relaxed">
+                  {step.desc}
+                  {step.link && (
+                    <>
+                      {" "}(
+                      <a
+                        href={step.link.href}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="text-primary underline hover:text-primary/80"
+                      >
+                        {step.link.text}
+                      </a>
+                      )
+                    </>
+                  )}
+                </p>
+              </li>
+            ))}
+          </ol>
+        </Card>
+
         {/* QR Card */}
         <Card className="mt-12 relative overflow-hidden p-0 border-border/60">
           <div className="absolute inset-0 bg-[image:var(--gradient-brand)] opacity-[0.07]" />
@@ -115,6 +194,44 @@ function PaymentPage() {
               <ShieldCheck className="h-3.5 w-3.5" /> Refer to your Offer Letter for the exact amount
             </div>
           </div>
+        </Card>
+
+        {/* Important Program Policies Notice */}
+        <Card className="mt-10 p-8 md:p-10 border-amber-500/30 bg-amber-500/[0.06]">
+          <div className="flex items-start gap-4">
+            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-amber-500/15 text-amber-600">
+              <AlertTriangle className="h-6 w-6" />
+            </div>
+            <div>
+              <h2 className="font-display text-2xl md:text-3xl font-semibold text-amber-700 dark:text-amber-400">
+                Important Program Policies
+              </h2>
+              <p className="mt-3 text-muted-foreground leading-relaxed">
+                Please review the following policies carefully before completing your enrollment.
+              </p>
+            </div>
+          </div>
+
+          <ul className="mt-7 grid gap-4 sm:grid-cols-2">
+            <li className="flex items-start gap-3 rounded-xl border border-amber-500/20 bg-background/60 p-4">
+              <Clock className="h-5 w-5 shrink-0 text-amber-600 mt-0.5" />
+              <div>
+                <p className="font-semibold text-foreground/90">Seat Policy</p>
+                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                  Seats are held for 24 hours following registration. Enrollment fees must be completed within 24 hours to prevent seat cancellation.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3 rounded-xl border border-amber-500/20 bg-background/60 p-4">
+              <GraduationCap className="h-5 w-5 shrink-0 text-amber-600 mt-0.5" />
+              <div>
+                <p className="font-semibold text-foreground/90">Training &amp; Project Allocation</p>
+                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                  Real client projects will be assigned after completing initial training modules to ensure proper execution.
+                </p>
+              </div>
+            </li>
+          </ul>
         </Card>
 
         {/* After Completing the Payment */}
@@ -174,6 +291,34 @@ function PaymentPage() {
               Sending these details is <span className="font-semibold">mandatory</span>. Once we
               receive and verify your submission, we will proceed with your enrollment process.
             </p>
+          </div>
+        </Card>
+
+        {/* WhatsApp Support Contact Bar */}
+        <Card className="mt-10 p-8 md:p-10 border-border/60">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="flex items-start gap-4">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400">
+                <MessageCircle className="h-6 w-6" />
+              </div>
+              <div>
+                <h2 className="font-display text-xl md:text-2xl font-semibold">
+                  Need assistance with access or payment?
+                </h2>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Our onboarding support team is available on WhatsApp to help you with LMS access, payment queries, and enrollment steps.
+                </p>
+              </div>
+            </div>
+            <a
+              href={`https://wa.me/${company.whatsappRaw}`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-700 hover:shadow-xl shrink-0"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Chat with Onboarding Support on WhatsApp
+            </a>
           </div>
         </Card>
 
