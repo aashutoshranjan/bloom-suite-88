@@ -47,7 +47,7 @@ function PaymentPage() {
   ];
 
   const afterVerification = [
-    { icon: FileCheck2, t: "Internship Confirmation", d: "Official confirmation of your enrollment." },
+    { icon: FileCheck2, t: "Internship Confirmation", d: "You will receive an official confirmation email of your enrollment." },
     { icon: KeyRound, t: "Login Credentials", d: "Access to your candidate dashboard." },
     { icon: Video, t: "Training Session Link", d: "Joining link for live training sessions." },
   ];
