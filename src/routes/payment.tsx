@@ -18,6 +18,10 @@ import {
   Phone,
   Briefcase,
   CalendarDays,
+  GraduationCap,
+  BookOpen,
+  ArrowRight,
+  AlertTriangle,
 } from "lucide-react";
 import { company } from "@/lib/company";
 
