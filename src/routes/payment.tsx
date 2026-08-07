@@ -196,6 +196,44 @@ function PaymentPage() {
           </div>
         </Card>
 
+        {/* Important Program Policies Notice */}
+        <Card className="mt-10 p-8 md:p-10 border-amber-500/30 bg-amber-500/[0.06]">
+          <div className="flex items-start gap-4">
+            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-amber-500/15 text-amber-600">
+              <AlertTriangle className="h-6 w-6" />
+            </div>
+            <div>
+              <h2 className="font-display text-2xl md:text-3xl font-semibold text-amber-700 dark:text-amber-400">
+                Important Program Policies
+              </h2>
+              <p className="mt-3 text-muted-foreground leading-relaxed">
+                Please review the following policies carefully before completing your enrollment.
+              </p>
+            </div>
+          </div>
+
+          <ul className="mt-7 grid gap-4 sm:grid-cols-2">
+            <li className="flex items-start gap-3 rounded-xl border border-amber-500/20 bg-background/60 p-4">
+              <Clock className="h-5 w-5 shrink-0 text-amber-600 mt-0.5" />
+              <div>
+                <p className="font-semibold text-foreground/90">Seat Policy</p>
+                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                  Seats are held for 24 hours following registration. Enrollment fees must be completed within 24 hours to prevent seat cancellation.
+                </p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3 rounded-xl border border-amber-500/20 bg-background/60 p-4">
+              <GraduationCap className="h-5 w-5 shrink-0 text-amber-600 mt-0.5" />
+              <div>
+                <p className="font-semibold text-foreground/90">Training &amp; Project Allocation</p>
+                <p className="text-sm text-muted-foreground mt-1 leading-relaxed">
+                  Real client projects will be assigned after completing initial training modules to ensure proper execution.
+                </p>
+              </div>
+            </li>
+          </ul>
+        </Card>
+
         {/* After Completing the Payment */}
         <Card className="mt-10 p-8 md:p-10 border-border/60">
           <div className="flex items-start gap-4">
