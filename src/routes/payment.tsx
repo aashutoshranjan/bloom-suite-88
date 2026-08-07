@@ -294,6 +294,34 @@ function PaymentPage() {
           </div>
         </Card>
 
+        {/* WhatsApp Support Contact Bar */}
+        <Card className="mt-10 p-8 md:p-10 border-border/60">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+            <div className="flex items-start gap-4">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400">
+                <MessageCircle className="h-6 w-6" />
+              </div>
+              <div>
+                <h2 className="font-display text-xl md:text-2xl font-semibold">
+                  Need assistance with access or payment?
+                </h2>
+                <p className="mt-1 text-sm text-muted-foreground">
+                  Our onboarding support team is available on WhatsApp to help you with LMS access, payment queries, and enrollment steps.
+                </p>
+              </div>
+            </div>
+            <a
+              href={`https://wa.me/${company.whatsappRaw}`}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-700 hover:shadow-xl shrink-0"
+            >
+              <MessageCircle className="h-4 w-4" />
+              Chat with Onboarding Support on WhatsApp
+            </a>
+          </div>
+        </Card>
+
         {/* Please share the following */}
         <Card className="mt-10 p-8 md:p-10 border-border/60">
           <h2 className="font-display text-2xl md:text-3xl font-semibold">
