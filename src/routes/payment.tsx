@@ -228,8 +228,8 @@ function PaymentPage() {
                 After Completing the Payment
               </h2>
               <p className="mt-3 text-muted-foreground leading-relaxed">
-                Once you have successfully made the payment, please send the following details along
-                with your payment screenshot to our support team.
+                After completion of your enrollment process, please share the required details as
+                mentioned and send your payment screenshot to our support team.
               </p>
             </div>
           </div>
