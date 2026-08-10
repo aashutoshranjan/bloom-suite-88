@@ -361,8 +361,10 @@ function PaymentPage() {
           <div>
             <p className="font-semibold">Important Note</p>
             <p className="text-sm text-muted-foreground mt-1">
-              Please ensure that all information provided is accurate and that your payment screenshot
-              is clearly visible to avoid any delay in processing your enrollment.
+              The confirmation email will be shared within one hour, while the login credentials will
+              be delivered by End of Day (Till 10:00 PM today). Please ensure that all information
+              provided is accurate and that your payment screenshot is clearly visible to avoid any
+              delay in processing your enrollment.
             </p>
           </div>
         </div>
