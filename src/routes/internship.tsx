@@ -7,7 +7,18 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
-import { GraduationCap } from "lucide-react";
+import {
+  GraduationCap,
+  Megaphone,
+  AlertCircle,
+  Camera,
+  User,
+  Mail,
+  Phone,
+  Briefcase,
+  CalendarDays,
+  Hash,
+} from "lucide-react";
 import { company } from "@/lib/company";
 
 export const Route = createFileRoute("/internship")({
@@ -99,6 +110,87 @@ function InternshipPage() {
             {loading ? "Submitting…" : "Submit Application"}
           </Button>
         </form>
+      </Card>
+
+      {/* Important Notice – Enrollment Confirmation */}
+      <Card className="mt-10 p-6 md:p-8 border-amber-500/30 bg-amber-500/[0.06]">
+        <div className="flex items-start gap-4">
+          <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-amber-500/15 text-amber-600">
+            <Megaphone className="h-6 w-6" />
+          </div>
+          <div className="min-w-0">
+            <h2 className="font-display text-2xl md:text-3xl font-semibold text-amber-700 dark:text-amber-400">
+              Important Notice – Enrollment Confirmation
+            </h2>
+
+            <div className="mt-4 space-y-4 text-muted-foreground leading-relaxed">
+              <p>
+                <span className="font-semibold text-foreground/90">Confirm Your Participation:</span>{" "}
+                To secure your place in the program, please complete the enrolment process by paying
+                the internship enrollment fee as specified in your Welcome Letter.
+              </p>
+              <p>
+                After completion of your enrollment process, please share the required details as
+                mentioned and send your payment screenshot to our support team at{" "}
+                <a
+                  href={`mailto:${company.email}`}
+                  className="text-primary underline hover:text-primary/80"
+                >
+                  {company.email}
+                </a>{" "}
+                / or At WhatsApp (
+                <a
+                  href={`https://wa.me/${company.whatsappRaw}`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-primary underline hover:text-primary/80"
+                >
+                  {company.whatsapp}
+                </a>
+                )
+              </p>
+              <p>
+                Sending this details via Email and via WhatsApp both are mandatory. Once we receive
+                your email, we will proceed with sending your confirmation email, login credentials,
+                and the WhatsApp number of your dedicated mentor.
+              </p>
+            </div>
+
+            <h3 className="mt-6 font-semibold text-foreground/90">
+              Please share the following details:
+            </h3>
+            <ul className="mt-3 grid gap-3 sm:grid-cols-2">
+              {[
+                { icon: Camera, label: "Payment Screenshot" },
+                { icon: User, label: "Full Name" },
+                { icon: Mail, label: "Email ID" },
+                { icon: Phone, label: "Contact Number" },
+                { icon: Briefcase, label: "Internship Position Applied For" },
+                { icon: CalendarDays, label: "Cohort Date" },
+                { icon: Hash, label: "Batch Code: (Mentioned in welcome letter)" },
+              ].map(({ icon: Icon, label }) => (
+                <li
+                  key={label}
+                  className="flex items-center gap-3 rounded-xl border border-amber-500/20 bg-background/60 p-4"
+                >
+                  <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-amber-500/10 text-amber-600">
+                    <Icon className="h-4.5 w-4.5" />
+                  </div>
+                  <span className="text-sm font-medium text-foreground/90">{label}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="mt-6 flex items-start gap-3 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm">
+              <AlertCircle className="h-5 w-5 shrink-0 text-amber-600" />
+              <p className="text-foreground/90">
+                <span className="font-semibold">Note:</span> The confirmation email will be shared
+                within one hour, while the login credentials will be delivered by End of Day (9:00 PM
+                today).
+              </p>
+            </div>
+          </div>
+        </div>
       </Card>
     </section>
   );
