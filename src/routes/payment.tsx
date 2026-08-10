@@ -39,10 +39,11 @@ function PaymentPage() {
   const shareDetails = [
     { icon: Camera, label: "Payment Screenshot" },
     { icon: User, label: "Full Name" },
-    { icon: Mail, label: "Email Address" },
+    { icon: Mail, label: "Email ID" },
     { icon: Phone, label: "Contact Number" },
     { icon: Briefcase, label: "Internship Position Applied For" },
-    { icon: CalendarDays, label: "Preferred Starting Date" },
+    { icon: CalendarDays, label: "Cohort Date" },
+    { icon: Hash, label: "Batch Code: (Mentioned in welcome letter)" },
   ];
 
   const afterVerification = [
