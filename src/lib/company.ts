@@ -3,6 +3,7 @@ export const company = {
   name: "Enerzcloud Ventures",
   shortName: "Enerzcloud",
   domain: "enerzcloud.com",
+  url: "https://enerzcloud.com",
   tagline: "Innovating Tomorrow's Digital Future",
   description:
     "Enerzcloud Ventures builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",

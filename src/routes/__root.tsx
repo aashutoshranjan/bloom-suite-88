@@ -69,7 +69,12 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { property: "og:title", content: `${company.name} — ${company.tagline}` },
       { property: "og:description", content: company.description },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: company.name },
+      { property: "og:locale", content: "en_IN" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: `${company.name} — ${company.tagline}` },
+      { name: "twitter:description", content: company.description },
+      { name: "robots", content: "index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
@@ -78,6 +83,51 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700;800&display=swap",
+      },
+    ],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "Organization",
+              "@id": `${company.url}/#organization`,
+              name: company.name,
+              url: company.url,
+              email: company.email,
+              telephone: company.whatsapp,
+              description: company.description,
+              address: {
+                "@type": "PostalAddress",
+                streetAddress: `${company.address.line1}, ${company.address.line2}`,
+                addressLocality: company.address.city,
+                addressRegion: company.address.state,
+                postalCode: company.address.pin,
+                addressCountry: "IN",
+              },
+              contactPoint: [
+                {
+                  "@type": "ContactPoint",
+                  contactType: "customer support",
+                  email: company.email,
+                  telephone: company.whatsapp,
+                  areaServed: "IN",
+                  availableLanguage: ["en", "hi"],
+                },
+              ],
+            },
+            {
+              "@type": "WebSite",
+              "@id": `${company.url}/#website`,
+              url: company.url,
+              name: company.name,
+              publisher: { "@id": `${company.url}/#organization` },
+              inLanguage: "en",
+            },
+          ],
+        }),
       },
     ],
   }),
