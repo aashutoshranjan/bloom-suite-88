@@ -11,7 +11,11 @@ export const Route = createFileRoute("/products")({
       { name: "description", content: "HRMS, CRM, LMS, ERP, hospital and school management, AI chatbots, and workflow automation by Enerzcloud Ventures." },
       { property: "og:title", content: `Products — ${company.name}` },
       { property: "og:description", content: "Enterprise-grade platforms ready to deploy." },
+      { property: "og:url", content: "https://enerzcloud.com/products" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://enerzcloud.com/products" }],
   }),
   component: ProductsPage,
 });

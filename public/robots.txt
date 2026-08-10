@@ -2,3 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /internship
 Disallow: /payment
+
+Sitemap: https://enerzcloud.com/sitemap.xml

@@ -11,7 +11,11 @@ export const Route = createFileRoute("/services")({
       { name: "description", content: "Custom software, AI, cloud, mobile, ERP, e-commerce, DevOps, security, and digital transformation services." },
       { property: "og:title", content: `Services — ${company.name}` },
       { property: "og:description", content: "Full-spectrum technology services from Enerzcloud Ventures." },
+      { property: "og:url", content: "https://enerzcloud.com/services" },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [{ rel: "canonical", href: "https://enerzcloud.com/services" }],
   }),
   component: ServicesPage,
 });
