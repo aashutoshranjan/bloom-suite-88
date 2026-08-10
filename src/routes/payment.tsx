@@ -289,7 +289,7 @@ function PaymentPage() {
                   Need assistance with access or payment?
                 </h2>
                 <p className="mt-1 text-sm text-muted-foreground">
-                  Our onboarding support team is available on WhatsApp to help you with LMS access, payment queries, and enrollment steps.
+                  Our onboarding support team is available on WhatsApp to help you with payment queries and enrollment steps.
                 </p>
               </div>
             </div>
