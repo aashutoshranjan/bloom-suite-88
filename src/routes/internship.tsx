@@ -7,7 +7,18 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
-import { GraduationCap } from "lucide-react";
+import {
+  GraduationCap,
+  Megaphone,
+  AlertCircle,
+  Camera,
+  User,
+  Mail,
+  Phone,
+  Briefcase,
+  CalendarDays,
+  Hash,
+} from "lucide-react";
 import { company } from "@/lib/company";
 
 export const Route = createFileRoute("/internship")({
