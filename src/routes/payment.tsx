@@ -117,6 +117,15 @@ function PaymentPage() {
             <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-4 py-1.5 text-xs font-semibold">
               <ShieldCheck className="h-3.5 w-3.5" /> Refer to your Offer Letter for the exact amount
             </div>
+
+            <div className="mt-6 max-w-2xl mx-auto flex items-start gap-3 rounded-xl border border-border/60 bg-background/60 p-4 text-sm">
+              <AlertCircle className="h-5 w-5 shrink-0 text-primary" />
+              <p className="text-foreground/90 text-left">
+                <span className="font-semibold">Note:</span> If you pay via Any UPI App, the payment
+                receiver may appear as either our company name or an authorized person’s name. Both
+                are valid.
+              </p>
+            </div>
           </div>
         </Card>
 
