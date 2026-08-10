@@ -20,7 +20,6 @@ import {
   CalendarDays,
   Megaphone,
   Hash,
-  AlertTriangle,
 } from "lucide-react";
 import { company } from "@/lib/company";
 
