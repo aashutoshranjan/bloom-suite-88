@@ -3,4 +3,4 @@ Allow: /
 Disallow: /internship
 Disallow: /payment
 
-Sitemap: https://enerzcloud.com/sitemap.xml
+Sitemap: https://uplayersrecruit.in/sitemap.xml
