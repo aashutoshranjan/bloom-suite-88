@@ -25,7 +25,7 @@ export const Route = createFileRoute("/internship")({
   head: () => ({
     meta: [
       { title: `Internship Application — ${company.name}` },
-      { name: "description", content: "Apply for an internship at Enerzcloud Ventures." },
+      { name: "description", content: "Apply for an internship at Uplayers Talent." },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),

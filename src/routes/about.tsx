@@ -10,11 +10,11 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: `Learn about ${company.name}, our mission, vision, values, and why enterprises partner with us.` },
       { property: "og:title", content: `About — ${company.name}` },
       { property: "og:description", content: `Mission, vision, and values behind ${company.name}.` },
-      { property: "og:url", content: "https://enerzcloud.com/about" },
+      { property: "og:url", content: "https://uplayersrecruit.in/about" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://enerzcloud.com/about" }],
+    links: [{ rel: "canonical", href: "https://uplayersrecruit.in/about" }],
   }),
   component: AboutPage,
 });

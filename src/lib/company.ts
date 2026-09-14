@@ -1,13 +1,13 @@
 // Centralized company information — edit this file to update site-wide content.
 export const company = {
-  name: "Enerzcloud Ventures",
-  shortName: "Enerzcloud",
-  domain: "enerzcloud.com",
-  url: "https://enerzcloud.com",
+  name: "Uplayers Talent",
+  shortName: "Uplayers",
+  domain: "uplayersrecruit.in",
+  url: "https://uplayersrecruit.in",
   tagline: "Innovating Tomorrow's Digital Future",
   description:
-    "Enerzcloud Ventures builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
-  email: "support@enerzcloud.com",
+    "Uplayers Talent builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
+  email: "support@uplayersrecruit.in",
   whatsapp: "+91 92622 92190",
   whatsappRaw: "919262292190",
   address: {
