@@ -20,6 +20,7 @@ import {
   CalendarDays,
   Megaphone,
   Hash,
+  GraduationCap,
 } from "lucide-react";
 import { company } from "@/lib/company";
 
@@ -91,6 +92,44 @@ function PaymentPage() {
             <span className="inline-flex items-center gap-2 text-muted-foreground">
               <Clock className="h-4 w-4 text-primary" /> Verified in &lt; 24h
             </span>
+          </div>
+        </div>
+
+        {/* Premium animated banner */}
+        <div className="relative mt-10 overflow-hidden rounded-3xl border border-border/60 bg-background/40 backdrop-blur-xl">
+          <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-primary/25 blur-3xl animate-[pulse_5s_ease-in-out_infinite]" />
+          <div className="pointer-events-none absolute -bottom-28 -right-20 h-80 w-80 rounded-full bg-fuchsia-500/20 blur-3xl animate-[pulse_7s_ease-in-out_infinite]" />
+          <div className="relative grid gap-8 p-8 md:grid-cols-2 md:p-12">
+            <div className="animate-fade-in">
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Cohort open</p>
+              <h2 className="mt-3 font-display text-3xl font-bold leading-tight md:text-4xl">
+                Learn. Build. Get hired.
+              </h2>
+              <p className="mt-3 text-muted-foreground">
+                Mentor-led projects, real deliverables and a certificate that recruiters recognise.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2">
+                {["Live mentorship", "Real projects", "Certificate", "Placement support"].map((t) => (
+                  <span key={t} className="rounded-full border border-border/60 bg-background/60 px-3 py-1 text-xs font-medium">
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            <div className="relative grid place-items-center">
+              <div className="relative h-48 w-48">
+                <div className="absolute inset-0 rounded-full border border-primary/30 animate-[spin_14s_linear_infinite]">
+                  <span className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-primary shadow-glow" />
+                </div>
+                <div className="absolute inset-6 rounded-full border border-fuchsia-500/30 animate-[spin_9s_linear_infinite_reverse]">
+                  <span className="absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-fuchsia-500" />
+                </div>
+                <div className="absolute inset-12 grid place-items-center rounded-full bg-[image:var(--gradient-brand)] text-white shadow-glow animate-[pulse_3s_ease-in-out_infinite]">
+                  <GraduationCap className="h-10 w-10" />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
