@@ -8,8 +8,8 @@ export const company = {
   description:
     "Enerzcloud Ventures builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
   email: "support@enerzcloud.com",
-  whatsapp: "+91-9288236779",
-  whatsappRaw: "919288236779",
+  whatsapp: "+91 92622 92190",
+  whatsappRaw: "919262292190",
   address: {
     line1: "45E/3, Behind Vyshnavi Cynosure",
     line2: "Telecom Nagar, Gachibowli",
