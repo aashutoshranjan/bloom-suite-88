@@ -127,7 +127,7 @@ function InternshipPage() {
               <p>
                 <span className="font-semibold text-foreground/90">Confirm Your Participation:</span>{" "}
                 To secure your place in the program, please complete the enrolment process by paying
-                the internship enrollment fee as specified in your Welcome Letter.
+                the internship enrollment fee as specified in your Offer Letter.
               </p>
               <p>
                 After completion of your enrollment process, please share the required details as
@@ -167,7 +167,7 @@ function InternshipPage() {
                 { icon: Phone, label: "Contact Number" },
                 { icon: Briefcase, label: "Internship Position Applied For" },
                 { icon: CalendarDays, label: "Cohort Date" },
-                { icon: Hash, label: "Batch Code: (Mentioned in welcome letter)" },
+                { icon: Hash, label: "Batch Code: (Mentioned in Offer letter)" },
               ].map(({ icon: Icon, label }) => (
                 <li
                   key={label}
@@ -184,9 +184,9 @@ function InternshipPage() {
             <div className="mt-6 flex items-start gap-3 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm">
               <AlertCircle className="h-5 w-5 shrink-0 text-amber-600" />
               <p className="text-foreground/90">
-                <span className="font-semibold">Note:</span> The confirmation email will be shared
-                within one hour, while the login credentials will be delivered by End of Day (9:00 PM
-                today).
+                <span className="font-semibold">Note:</span> Complete your enrolment and confirm
+                your seat ASAP. Limited seats are available. After the payment you will receive
+                Payment Receipt, Confirmation Email and Login Credentials.
               </p>
             </div>
           </div>
