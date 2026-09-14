@@ -54,6 +54,44 @@ function InternshipPage() {
         <p className="mt-3 text-muted-foreground">Build the future with us. Tell us about yourself.</p>
       </div>
 
+      {/* Premium animated banner */}
+      <div className="relative mt-10 overflow-hidden rounded-3xl border border-border/60 bg-background/40 backdrop-blur-xl">
+        <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-primary/25 blur-3xl animate-[pulse_5s_ease-in-out_infinite]" />
+        <div className="pointer-events-none absolute -bottom-28 -right-20 h-80 w-80 rounded-full bg-fuchsia-500/20 blur-3xl animate-[pulse_7s_ease-in-out_infinite]" />
+        <div className="relative grid gap-8 p-8 md:grid-cols-2 md:p-12">
+          <div className="animate-fade-in">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-primary">Cohort open</p>
+            <h2 className="mt-3 font-display text-3xl font-bold leading-tight md:text-4xl">
+              Learn. Build. Get hired.
+            </h2>
+            <p className="mt-3 text-muted-foreground">
+              Mentor-led projects, real deliverables and a certificate that recruiters recognise.
+            </p>
+            <div className="mt-6 flex flex-wrap gap-2">
+              {["Live mentorship", "Real projects", "Certificate", "Placement support"].map((t) => (
+                <span key={t} className="rounded-full border border-border/60 bg-background/60 px-3 py-1 text-xs font-medium">
+                  {t}
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div className="relative grid place-items-center">
+            <div className="relative h-48 w-48">
+              <div className="absolute inset-0 rounded-full border border-primary/30 animate-[spin_14s_linear_infinite]">
+                <span className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rounded-full bg-primary shadow-glow" />
+              </div>
+              <div className="absolute inset-6 rounded-full border border-fuchsia-500/30 animate-[spin_9s_linear_infinite_reverse]">
+                <span className="absolute -top-1 left-1/2 h-2 w-2 -translate-x-1/2 rounded-full bg-fuchsia-500" />
+              </div>
+              <div className="absolute inset-12 grid place-items-center rounded-full bg-[image:var(--gradient-brand)] text-white shadow-glow animate-[pulse_3s_ease-in-out_infinite]">
+                <GraduationCap className="h-10 w-10" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <Card className="mt-10 p-6 md:p-8">
         <form
           className="grid gap-5"
@@ -127,7 +165,7 @@ function InternshipPage() {
               <p>
                 <span className="font-semibold text-foreground/90">Confirm Your Participation:</span>{" "}
                 To secure your place in the program, please complete the enrolment process by paying
-                the internship enrollment fee as specified in your Welcome Letter.
+                the internship enrollment fee as specified in your Offer Letter.
               </p>
               <p>
                 After completion of your enrollment process, please share the required details as
@@ -167,7 +205,7 @@ function InternshipPage() {
                 { icon: Phone, label: "Contact Number" },
                 { icon: Briefcase, label: "Internship Position Applied For" },
                 { icon: CalendarDays, label: "Cohort Date" },
-                { icon: Hash, label: "Batch Code: (Mentioned in welcome letter)" },
+                { icon: Hash, label: "Batch Code: (Mentioned in Offer letter)" },
               ].map(({ icon: Icon, label }) => (
                 <li
                   key={label}
@@ -184,9 +222,9 @@ function InternshipPage() {
             <div className="mt-6 flex items-start gap-3 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm">
               <AlertCircle className="h-5 w-5 shrink-0 text-amber-600" />
               <p className="text-foreground/90">
-                <span className="font-semibold">Note:</span> The confirmation email will be shared
-                within one hour, while the login credentials will be delivered by End of Day (9:00 PM
-                today).
+                <span className="font-semibold">Note:</span> Complete your enrolment and confirm
+                your seat ASAP. Limited seats are available. After the payment you will receive
+                Payment Receipt, Confirmation Email and Login Credentials.
               </p>
             </div>
           </div>
