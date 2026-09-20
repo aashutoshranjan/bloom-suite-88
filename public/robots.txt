@@ -3,4 +3,4 @@ Allow: /
 Disallow: /internship
 Disallow: /payment
 
-Sitemap: https://uplayersrecruit.in/sitemap.xml
+Sitemap: https://axonbloom.com/sitemap.xml

@@ -29,6 +29,10 @@ export const Route = createFileRoute("/payment")({
     meta: [
       { title: `Complete Enrollment — ${company.name}` },
       { name: "description", content: "Complete your internship enrollment payment." },
+      { property: "og:title", content: `Complete Enrollment — ${company.name}` },
+      { property: "og:description", content: "Complete your Axonbloom Talent internship enrollment payment." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex,nofollow" },
     ],
   }),
