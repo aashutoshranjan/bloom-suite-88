@@ -1,5 +1,5 @@
 import { Link } from "@tanstack/react-router";
-import { Mail, MapPin, Phone, Linkedin, Twitter, Github, Instagram } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 import { company, formattedAddress } from "@/lib/company";
 
 export function Footer() {
@@ -13,10 +13,7 @@ export function Footer() {
           </div>
           <p className="mt-4 max-w-md text-sm text-white/70">{company.description}</p>
           <div className="mt-6 flex gap-3">
-            <a aria-label="LinkedIn" href={company.social.linkedin} className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-white/20 transition"><Linkedin className="h-4 w-4" /></a>
-            <a aria-label="Twitter" href={company.social.twitter} className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-white/20 transition"><Twitter className="h-4 w-4" /></a>
-            <a aria-label="GitHub" href={company.social.github} className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-white/20 transition"><Github className="h-4 w-4" /></a>
-            <a aria-label="Instagram" href={company.social.instagram} className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-white/20 transition"><Instagram className="h-4 w-4" /></a>
+            <a aria-label="LinkedIn" href="https://www.linkedin.com/company/nixonabyte-solutions/" target="_blank" rel="noopener noreferrer" className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-white/20 transition"><Linkedin className="h-4 w-4" /></a>
           </div>
         </div>
         <div>
