@@ -11,14 +11,14 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: `${company.name} — ${company.tagline}` },
-      { name: "description", content: "Enterprise software, AI, cloud, and digital transformation by Uplayers Talent." },
+      { name: "description", content: "Enterprise software, AI, cloud, and digital transformation by Axonbloom Talent." },
       { property: "og:title", content: `${company.name} — ${company.tagline}` },
       { property: "og:description", content: company.description },
-      { property: "og:url", content: "https://uplayersrecruit.in/" },
+      { property: "og:url", content: `${company.url}/` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://uplayersrecruit.in/" }],
+    links: [{ rel: "canonical", href: `${company.url}/` }],
   }),
   component: Home,
 });
@@ -83,7 +83,7 @@ const steps = [
 ];
 
 const testimonials = [
-  { q: "Uplayers Talent rebuilt our core platform and cut our cloud spend by 38%.", a: "CTO, FinTech scale-up" },
+  { q: "Axonbloom Talent rebuilt our core platform and cut our cloud spend by 38%.", a: "CTO, FinTech scale-up" },
   { q: "Their AI team shipped a production copilot in 9 weeks. Game-changing.", a: "Head of Product, SaaS" },
   { q: "Truly enterprise-grade engineering. Documentation and SRE were exceptional.", a: "VP Engineering, Healthcare" },
 ];
@@ -142,7 +142,7 @@ function Home() {
       {/* WHY CHOOSE */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-24">
         <div className="max-w-2xl">
-          <p className="text-sm font-semibold uppercase tracking-wider text-accent">Why Uplayers</p>
+          <p className="text-sm font-semibold uppercase tracking-wider text-accent">Why Axonbloom</p>
           <h2 className="mt-2 text-4xl md:text-5xl font-bold">Built like a Fortune-500 partner</h2>
           <p className="mt-4 text-muted-foreground">We bring senior engineering, rigorous process, and obsession with outcomes to every engagement.</p>
         </div>

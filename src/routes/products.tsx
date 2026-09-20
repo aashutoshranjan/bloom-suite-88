@@ -8,14 +8,14 @@ export const Route = createFileRoute("/products")({
   head: () => ({
     meta: [
       { title: `Products — ${company.name}` },
-      { name: "description", content: "HRMS, CRM, LMS, ERP, hospital and school management, AI chatbots, and workflow automation by Uplayers Talent." },
+      { name: "description", content: "HRMS, CRM, LMS, ERP, hospital and school management, AI chatbots, and workflow automation by Axonbloom Talent." },
       { property: "og:title", content: `Products — ${company.name}` },
       { property: "og:description", content: "Enterprise-grade platforms ready to deploy." },
-      { property: "og:url", content: "https://uplayersrecruit.in/products" },
+      { property: "og:url", content: `${company.url}/products` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://uplayersrecruit.in/products" }],
+    links: [{ rel: "canonical", href: `${company.url}/products` }],
   }),
   component: ProductsPage,
 });

@@ -17,11 +17,11 @@ export const Route = createFileRoute("/contact")({
       { name: "description", content: `Talk to ${company.name}. Office in Hyderabad. Email ${company.email}, WhatsApp ${company.whatsapp}.` },
       { property: "og:title", content: `Contact — ${company.name}` },
       { property: "og:description", content: "Reach our team for a tailored proposal." },
-      { property: "og:url", content: "https://uplayersrecruit.in/contact" },
+      { property: "og:url", content: `${company.url}/contact` },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "https://uplayersrecruit.in/contact" }],
+    links: [{ rel: "canonical", href: `${company.url}/contact` }],
   }),
   component: ContactPage,
 });

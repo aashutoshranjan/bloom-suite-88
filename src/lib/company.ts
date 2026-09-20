@@ -1,13 +1,13 @@
 // Centralized company information — edit this file to update site-wide content.
 export const company = {
-  name: "Uplayers Talent",
-  shortName: "Uplayers",
-  domain: "uplayersrecruit.in",
-  url: "https://uplayersrecruit.in",
+  name: "Axonbloom Talent",
+  shortName: "Axonbloom",
+  domain: "axonbloom.com",
+  url: "https://axonbloom.com",
   tagline: "Innovating Tomorrow's Digital Future",
   description:
-    "Uplayers Talent builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
-  email: "support@uplayersrecruit.in",
+    "Axonbloom Talent builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
+  email: "support@axonbloom.com",
   whatsapp: "+91 92622 92190",
   whatsappRaw: "919262292190",
   address: {
