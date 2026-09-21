@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 import { company, formattedAddress } from "@/lib/company";
-import logoAsset from "@/assets/aldenaire-logo.png.asset.json";
+import logoMark from "@/assets/aldenaire-mark.png";
 
 export function Footer() {
   return (
