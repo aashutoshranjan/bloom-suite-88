@@ -9,7 +9,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <img src={logoAsset.url} alt="Aldenaire logo" className="h-10 w-10 rounded-lg object-cover" />
+            <img src={logoMark} alt="Aldenaire logo" className="h-10 w-10 rounded-lg object-cover" />
             <span className="font-display text-xl font-semibold">{company.name}</span>
           </div>
           <p className="mt-4 max-w-md text-sm text-white/70">{company.description}</p>
