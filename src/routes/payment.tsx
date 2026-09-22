@@ -15,7 +15,6 @@ import {
   Hash,
   AlertCircle,
   Megaphone,
-  GraduationCap,
 } from "lucide-react";
 import { company } from "@/lib/company";
 
