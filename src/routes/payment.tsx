@@ -7,19 +7,8 @@ import {
   Clock,
   BadgeCheck,
   Mail,
-  MessageCircle,
-  CheckCircle2,
   AlertCircle,
-  KeyRound,
-  Video,
-  FileCheck2,
-  Camera,
-  User,
-  Phone,
-  Briefcase,
-  CalendarDays,
   Megaphone,
-  Hash,
   GraduationCap,
 } from "lucide-react";
 import { company } from "@/lib/company";
@@ -40,21 +29,6 @@ export const Route = createFileRoute("/payment")({
 });
 
 function PaymentPage() {
-  const shareDetails = [
-    { icon: Camera, label: "Payment Screenshot" },
-    { icon: User, label: "Full Name" },
-    { icon: Mail, label: "Email ID" },
-    { icon: Phone, label: "Contact Number" },
-    { icon: Briefcase, label: "Internship Position Applied For" },
-    { icon: CalendarDays, label: "Cohort Date" },
-    { icon: Hash, label: "Batch Code: (Mentioned in Offer letter)" },
-  ];
-
-  const afterVerification = [
-    { icon: FileCheck2, t: "Internship Confirmation", d: "You will receive an official confirmation email of your enrollment." },
-    { icon: KeyRound, t: "Login Credentials", d: "Access to your candidate dashboard." },
-    { icon: Video, t: "Training Session Link", d: "Joining link for live training sessions." },
-  ];
 
   return (
     <section className="relative">
@@ -252,7 +226,7 @@ function PaymentPage() {
                 <p className="text-foreground/90">
                   <span className="font-semibold">Note:</span> Complete your enrolment and confirm
                   your seat ASAP. Limited seats are available. After the payment you will receive
-                  Payment Receipt, Confirmation Email and Login Credentials.
+                  Payment Receipt, Confirmation Email and Login Credentials to start your internship.
                 </p>
               </div>
             </div>
@@ -404,9 +378,10 @@ function PaymentPage() {
             <p className="font-semibold">Important Note</p>
             <p className="text-sm text-muted-foreground mt-1">
               Complete your enrolment and confirm your seat ASAP. Limited seats are available. After
-              the payment you will receive Payment Receipt, Confirmation Email and Login Credentials.
-              Please ensure that all information provided is accurate and that your payment
-              screenshot is clearly visible to avoid any delay in processing your enrollment.
+              the payment you will receive Payment Receipt, Confirmation Email and Login Credentials
+              to start your internship. Please ensure that all information provided is accurate and
+              that your payment screenshot is clearly visible to avoid any delay in processing your
+              enrollment.
             </p>
           </div>
         </div>
