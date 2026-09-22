@@ -7,19 +7,14 @@ import {
   Clock,
   BadgeCheck,
   Mail,
-  MessageCircle,
-  CheckCircle2,
-  AlertCircle,
-  KeyRound,
-  Video,
-  FileCheck2,
   Camera,
   User,
   Phone,
   Briefcase,
   CalendarDays,
-  Megaphone,
   Hash,
+  AlertCircle,
+  Megaphone,
   GraduationCap,
 } from "lucide-react";
 import { company } from "@/lib/company";
@@ -40,21 +35,6 @@ export const Route = createFileRoute("/payment")({
 });
 
 function PaymentPage() {
-  const shareDetails = [
-    { icon: Camera, label: "Payment Screenshot" },
-    { icon: User, label: "Full Name" },
-    { icon: Mail, label: "Email ID" },
-    { icon: Phone, label: "Contact Number" },
-    { icon: Briefcase, label: "Internship Position Applied For" },
-    { icon: CalendarDays, label: "Cohort Date" },
-    { icon: Hash, label: "Batch Code: (Mentioned in Offer letter)" },
-  ];
-
-  const afterVerification = [
-    { icon: FileCheck2, t: "Internship Confirmation", d: "You will receive an official confirmation email of your enrollment." },
-    { icon: KeyRound, t: "Login Credentials", d: "Access to your candidate dashboard." },
-    { icon: Video, t: "Training Session Link", d: "Joining link for live training sessions." },
-  ];
 
   return (
     <section className="relative">
@@ -252,148 +232,13 @@ function PaymentPage() {
                 <p className="text-foreground/90">
                   <span className="font-semibold">Note:</span> Complete your enrolment and confirm
                   your seat ASAP. Limited seats are available. After the payment you will receive
-                  Payment Receipt, Confirmation Email and Login Credentials.
+                  Payment Receipt, Confirmation Email and Login Credentials to start your internship.
                 </p>
               </div>
             </div>
           </div>
         </Card>
 
-        {/* After Completing the Payment */}
-        <Card className="mt-10 p-8 md:p-10 border-border/60">
-          <div className="flex items-start gap-4">
-            <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-[image:var(--gradient-brand)] text-white shadow-glow">
-              <CheckCircle2 className="h-6 w-6" />
-            </div>
-            <div>
-              <h2 className="font-display text-2xl md:text-3xl font-semibold">
-                After Completing the Payment
-              </h2>
-              <p className="mt-3 text-muted-foreground leading-relaxed">
-                After completion of your enrollment process, please share the required details as
-                mentioned and send your payment screenshot to our support team.
-              </p>
-            </div>
-          </div>
-
-          {/* Contact channels */}
-          <div className="mt-8 grid gap-4 sm:grid-cols-2">
-            <a
-              href={`mailto:${company.email}`}
-              className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-secondary/30 p-5 transition hover:border-primary hover:bg-secondary/50"
-            >
-              <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
-                <Mail className="h-5 w-5" />
-              </div>
-              <div className="min-w-0">
-                <p className="text-xs uppercase tracking-widest text-muted-foreground">Email</p>
-                <p className="font-semibold truncate group-hover:text-primary transition">
-                  {company.email}
-                </p>
-              </div>
-            </a>
-            <a
-              href={`https://wa.me/${company.whatsappRaw}`}
-              target="_blank"
-              rel="noreferrer"
-              className="group flex items-center gap-4 rounded-2xl border border-border/60 bg-secondary/30 p-5 transition hover:border-primary hover:bg-secondary/50"
-            >
-              <div className="grid h-11 w-11 shrink-0 place-items-center rounded-xl bg-primary/10 text-primary">
-                <MessageCircle className="h-5 w-5" />
-              </div>
-              <div className="min-w-0">
-                <p className="text-xs uppercase tracking-widest text-muted-foreground">WhatsApp</p>
-                <p className="font-semibold truncate group-hover:text-primary transition">
-                  {company.whatsapp}
-                </p>
-              </div>
-            </a>
-          </div>
-
-          <div className="mt-6 flex items-start gap-3 rounded-xl border border-amber-500/30 bg-amber-500/10 p-4 text-sm">
-            <AlertCircle className="h-5 w-5 shrink-0 text-amber-600" />
-            <p className="text-foreground/90">
-              Sending these details is <span className="font-semibold">mandatory</span>. Once we
-              receive and verify your submission, we will proceed with your enrollment process.
-            </p>
-          </div>
-        </Card>
-
-        {/* WhatsApp Support Contact Bar */}
-        <Card className="mt-10 p-8 md:p-10 border-border/60">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-            <div className="flex items-start gap-4">
-              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-green-100 text-green-600 dark:bg-green-900/30 dark:text-green-400">
-                <MessageCircle className="h-6 w-6" />
-              </div>
-              <div>
-                <h2 className="font-display text-xl md:text-2xl font-semibold">
-                  Need assistance with access or payment?
-                </h2>
-                <p className="mt-1 text-sm text-muted-foreground">
-                  Our onboarding support team is available on WhatsApp to help you with payment queries and enrollment steps.
-                </p>
-              </div>
-            </div>
-            <a
-              href={`https://wa.me/${company.whatsappRaw}`}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-green-600 px-6 py-3 text-sm font-semibold text-white shadow-lg transition hover:bg-green-700 hover:shadow-xl shrink-0"
-            >
-              <MessageCircle className="h-4 w-4" />
-              Chat with Onboarding Support on WhatsApp
-            </a>
-          </div>
-        </Card>
-
-        {/* Please share the following */}
-        <Card className="mt-10 p-8 md:p-10 border-border/60">
-          <h2 className="font-display text-2xl md:text-3xl font-semibold">
-            Please Share the Following Details
-          </h2>
-          <p className="mt-2 text-sm text-muted-foreground">
-            Send these to our email or WhatsApp listed above.
-          </p>
-
-          <ul className="mt-7 grid gap-3 sm:grid-cols-2">
-            {shareDetails.map(({ icon: Icon, label }) => (
-              <li
-                key={label}
-                className="flex items-center gap-3 rounded-xl border border-border/60 bg-background/40 p-4"
-              >
-                <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg bg-primary/10 text-primary">
-                  <Icon className="h-4.5 w-4.5" />
-                </div>
-                <span className="text-sm font-medium text-foreground/90">{label}</span>
-              </li>
-            ))}
-          </ul>
-        </Card>
-
-        {/* After Verification */}
-        <Card className="mt-10 p-8 md:p-10 border-border/60">
-          <h2 className="font-display text-2xl md:text-3xl font-semibold">
-            After Verification, You Will Receive
-          </h2>
-          <div className="mt-7 grid gap-4 sm:grid-cols-3">
-            {afterVerification.map(({ icon: Icon, t, d }) => (
-              <div
-                key={t}
-                className="relative overflow-hidden rounded-2xl border border-border/60 bg-secondary/30 p-5"
-              >
-                <div className="grid h-11 w-11 place-items-center rounded-xl bg-[image:var(--gradient-brand)] text-white shadow-glow">
-                  <Icon className="h-5 w-5" />
-                </div>
-                <p className="mt-4 font-semibold">{t}</p>
-                <p className="mt-1 text-sm text-muted-foreground">{d}</p>
-              </div>
-            ))}
-          </div>
-          <p className="mt-6 text-sm text-muted-foreground">
-            These details will be sent to your registered email after successful payment verification.
-          </p>
-        </Card>
 
         {/* Important note */}
         <div className="mt-10 flex items-start gap-3 rounded-2xl border border-border/60 bg-background/40 backdrop-blur p-5">
@@ -404,9 +249,10 @@ function PaymentPage() {
             <p className="font-semibold">Important Note</p>
             <p className="text-sm text-muted-foreground mt-1">
               Complete your enrolment and confirm your seat ASAP. Limited seats are available. After
-              the payment you will receive Payment Receipt, Confirmation Email and Login Credentials.
-              Please ensure that all information provided is accurate and that your payment
-              screenshot is clearly visible to avoid any delay in processing your enrollment.
+              the payment you will receive Payment Receipt, Confirmation Email and Login Credentials
+              to start your internship. Please ensure that all information provided is accurate and
+              that your payment screenshot is clearly visible to avoid any delay in processing your
+              enrollment.
             </p>
           </div>
         </div>
