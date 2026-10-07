@@ -8,8 +8,8 @@ export const company = {
   description:
     "Axonbloom Talent builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
   email: "support@axonbloom.com",
-  whatsapp: "+91 92622 92190",
-  whatsappRaw: "919262292190",
+  whatsapp: "+91 91022 66237",
+  whatsappRaw: "919102266237",
   address: {
     line1: "45E/3, Behind Vyshnavi Cynosure",
     line2: "Telecom Nagar, Gachibowli",
