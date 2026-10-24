@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { createServerFn } from "@tanstack/react-start";
 import { Card } from "@/components/ui/card";
 import {
   ShieldCheck,
@@ -15,10 +17,25 @@ import {
   Hash,
   AlertCircle,
   Megaphone,
+  Copy,
+  Check,
 } from "lucide-react";
 import { company } from "@/lib/company";
 
+// UPI ID is resolved server-side so it can be changed on your own server
+// (UPI_ID environment variable) without touching the code or rebuilding.
+const getUpiId = createServerFn({ method: "GET" }).handler(async () => {
+  return process.env["UPI_ID"] || company.upiId;
+});
+
 export const Route = createFileRoute("/payment")({
+  loader: async () => {
+    try {
+      return await getUpiId();
+    } catch {
+      return company.upiId;
+    }
+  },
   head: () => ({
     meta: [
       { title: `Complete Enrollment — ${company.name}` },
