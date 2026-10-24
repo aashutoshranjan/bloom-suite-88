@@ -51,6 +51,28 @@ export const Route = createFileRoute("/payment")({
 });
 
 function PaymentPage() {
+  const upiId = Route.useLoaderData() || company.upiId;
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (!copied) return;
+    const t = setTimeout(() => setCopied(false), 2000);
+    return () => clearTimeout(t);
+  }, [copied]);
+
+  const copyUpi = async () => {
+    try {
+      await navigator.clipboard.writeText(upiId);
+    } catch {
+      const el = document.createElement("textarea");
+      el.value = upiId;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
+    }
+    setCopied(true);
+  };
 
   return (
     <section className="relative">
