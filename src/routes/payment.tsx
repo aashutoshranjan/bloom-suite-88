@@ -1,4 +1,6 @@
+import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
+import { createServerFn } from "@tanstack/react-start";
 import { Card } from "@/components/ui/card";
 import {
   ShieldCheck,
@@ -15,10 +17,25 @@ import {
   Hash,
   AlertCircle,
   Megaphone,
+  Copy,
+  Check,
 } from "lucide-react";
 import { company } from "@/lib/company";
 
+// UPI ID is resolved server-side so it can be changed on your own server
+// (UPI_ID environment variable) without touching the code or rebuilding.
+const getUpiId = createServerFn({ method: "GET" }).handler(async () => {
+  return process.env["UPI_ID"] || company.upiId;
+});
+
 export const Route = createFileRoute("/payment")({
+  loader: async () => {
+    try {
+      return await getUpiId();
+    } catch {
+      return company.upiId;
+    }
+  },
   head: () => ({
     meta: [
       { title: `Complete Enrollment — ${company.name}` },
@@ -34,6 +51,28 @@ export const Route = createFileRoute("/payment")({
 });
 
 function PaymentPage() {
+  const upiId = Route.useLoaderData() || company.upiId;
+  const [copied, setCopied] = useState(false);
+
+  useEffect(() => {
+    if (!copied) return;
+    const t = setTimeout(() => setCopied(false), 2000);
+    return () => clearTimeout(t);
+  }, [copied]);
+
+  const copyUpi = async () => {
+    try {
+      await navigator.clipboard.writeText(upiId);
+    } catch {
+      const el = document.createElement("textarea");
+      el.value = upiId;
+      document.body.appendChild(el);
+      el.select();
+      document.execCommand("copy");
+      document.body.removeChild(el);
+    }
+    setCopied(true);
+  };
 
   return (
     <section className="relative">
@@ -97,6 +136,42 @@ function PaymentPage() {
                 height={320}
                 className="block w-[260px] h-[260px] md:w-[300px] md:h-[300px] object-contain"
               />
+            </div>
+
+            {/* Copy UPI ID & Pay */}
+            <div className="mt-8 mx-auto w-full max-w-md">
+              <div className="flex items-center gap-3 rounded-2xl border border-border/60 bg-background/70 backdrop-blur p-2 pl-5 shadow-elegant">
+                <div className="min-w-0 flex-1 text-left">
+                  <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
+                    UPI ID
+                  </p>
+                  <p className="truncate font-mono text-sm md:text-base font-semibold text-foreground">
+                    {upiId}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={copyUpi}
+                  className={`inline-flex shrink-0 items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors ${
+                    copied
+                      ? "bg-primary/15 text-primary"
+                      : "bg-primary text-primary-foreground hover:bg-primary/90"
+                  }`}
+                >
+                  {copied ? (
+                    <>
+                      <Check className="h-4 w-4" /> Copied
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="h-4 w-4" /> Copy &amp; Pay
+                    </>
+                  )}
+                </button>
+              </div>
+              <p className="mt-2.5 text-xs text-muted-foreground">
+                Copy the UPI ID and pay your enrollment fees from any UPI app.
+              </p>
             </div>
 
             <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-4 py-1.5 text-xs font-semibold">

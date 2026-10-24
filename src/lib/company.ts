@@ -10,6 +10,9 @@ export const company = {
   email: "support@axonbloom.com",
   whatsapp: "+91 91022 66237",
   whatsappRaw: "919102266237",
+  // Default UPI ID for enrollment payments. Override at runtime on your own
+  // server by setting the UPI_ID environment variable (PM2 / .env) — no rebuild needed.
+  upiId: "axonmettechnologies@ptyes",
   address: {
     line1: "45E/3, Behind Vyshnavi Cynosure",
     line2: "Telecom Nagar, Gachibowli",
