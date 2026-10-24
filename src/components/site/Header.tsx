@@ -20,7 +20,7 @@ export function Header() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 group">
           <img src={logoMark} alt="Aldenaire logo" className="h-9 w-9 rounded-lg bg-[#1800ad] object-contain p-[3px] shadow-glow transition-transform group-hover:scale-105" />
-          <span className="font-display text-lg font-semibold tracking-tight">{company.shortName}<span className="text-muted-foreground font-normal"> Talent</span></span>
+          <span className="font-display text-lg font-semibold tracking-tight">{company.shortName}<span className="text-muted-foreground font-normal"> Technologies</span></span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">
           {nav.map((n) => (
