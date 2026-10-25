@@ -16,6 +16,7 @@ import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
 import { Toaster } from "@/components/ui/sonner";
 import { company } from "@/lib/company";
+import { AnnouncementBanner } from "@/components/site/AnnouncementBanner";
 
 function NotFoundComponent() {
   return (
