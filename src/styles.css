@@ -37,6 +37,9 @@
   --color-indigo: var(--indigo);
   --color-violet: var(--violet);
   --color-deep: var(--deep);
+  --color-banner: var(--banner);
+  --color-banner-foreground: var(--banner-foreground);
+  --color-banner-cyan: var(--banner-cyan);
 
   --gradient-brand: var(--gradient-brand);
   --gradient-hero: var(--gradient-hero);
