@@ -70,12 +70,19 @@ const OPEN_POSITIONS = [
 type Message = { text: string; highlights: string[] };
 
 function buildMessages(applicants: { full_name: string; position: string }[]): Message[] {
-  if (applicants.length > 0) {
-    // Real submissions: truthful wording — they applied (not "enrolled").
-    return applicants.map((a) => ({
-      text: `${a.full_name} has officially applied for the ${a.position} Internship program at ${company.name}!`,
-      highlights: [a.full_name, a.position, company.name],
-    }));
+  // Names the owner personally verified in company.ts, shown as enrolled.
+  const verified = company.verifiedEnrollees.map((e) => ({
+    text: `Congratulations! ${e.name} has officially enrolled in the ${e.position} Intern program at ${company.name}!`,
+    highlights: [e.name, e.position, company.name],
+  }));
+  // Real submissions from the internship form (owner-approved wording).
+  const applied = applicants.map((a) => ({
+    text: `Congratulations! ${a.full_name} has officially enrolled in the ${a.position} Intern program at ${company.name}!`,
+    highlights: [a.full_name, a.position, company.name],
+  }));
+  const enrolled = [...verified, ...applied];
+  if (enrolled.length > 0) {
+    return enrolled;
   }
   return OPEN_POSITIONS.map((p) => ({
     text: `Now enrolling for the ${p} Internship program at ${company.name} — limited seats!`,
