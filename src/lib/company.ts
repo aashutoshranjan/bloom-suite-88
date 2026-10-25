@@ -13,6 +13,10 @@ export const company = {
   // Default UPI ID for enrollment payments. Override at runtime on your own
   // server by setting the UPI_ID environment variable (PM2 / .env) — no rebuild needed.
   upiId: "axonmettechnologies@ptyes",
+  // Names the owner has personally verified as enrolled. Add entries like
+  // { name: "Aashutosh", position: "Data Analyst" } — each appears in the
+  // top announcement banner as "Congratulations! ... has officially enrolled".
+  verifiedEnrollees: [] as { name: string; position: string }[],
   address: {
     line1: "45E/3, Behind Vyshnavi Cynosure",
     line2: "Telecom Nagar, Gachibowli",
