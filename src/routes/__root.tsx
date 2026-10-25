@@ -158,6 +158,7 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
+      <AnnouncementBanner />
       <Header />
       <main id="main" className="min-h-[60dvh]">
         <Outlet />
