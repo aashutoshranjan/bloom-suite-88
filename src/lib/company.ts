@@ -41,7 +41,7 @@ export const company = {
     { name: "Saurabh Kumar", position: "Artificial Intelligence" },
     { name: "Tanya Gupta", position: "HR Recruiter" },
     { name: "Ravi Shankar", position: "Medical Coding" },
-    { name: "Swati Kumari", position: "Digital Marketing" },
+    { name: "Swati Kumari", position: "Medical Billing" },
     { name: "Mohit Agarwal", position: "Account Executive" },
     { name: "Divya Sharma", position: "Healthcare Data Analyst" },
     { name: "Akash Yadav", position: "Technical Support Executive" },
