@@ -88,13 +88,13 @@ function buildMessages(applicants: { full_name: string; position: string }[]): M
     });
   }
 
-  // Open positions keep the rotation changing every few seconds, mixing
-  // name messages with position messages.
-  for (const p of OPEN_POSITIONS) {
-    messages.push({
+  // Open positions are the truthful fallback only when the owner list and
+  // real applications are both empty — never shown alongside names.
+  if (messages.length === 0) {
+    return OPEN_POSITIONS.map((p) => ({
       text: `Now enrolling for the ${p} Internship program at ${company.name} — limited seats!`,
       highlights: [p, company.name],
-    });
+    }));
   }
 
   return messages;
