@@ -88,12 +88,16 @@ function buildMessages(applicants: { full_name: string; position: string }[]): M
     });
   }
 
-  if (messages.length > 0) return messages;
+  // Open positions keep the rotation changing every few seconds, mixing
+  // name messages with position messages.
+  for (const p of OPEN_POSITIONS) {
+    messages.push({
+      text: `Now enrolling for the ${p} Internship program at ${company.name} — limited seats!`,
+      highlights: [p, company.name],
+    });
+  }
 
-  return OPEN_POSITIONS.map((p) => ({
-    text: `Now enrolling for the ${p} Internship program at ${company.name} — limited seats!`,
-    highlights: [p, company.name],
-  }));
+  return messages;
 }
 
 function Highlighted({ message }: { message: Message }) {
@@ -174,11 +178,11 @@ export function AnnouncementBanner() {
     <div
       role="status"
       aria-live="polite"
-      className="relative z-40 flex h-11 items-center justify-center overflow-hidden bg-banner px-3 text-center md:h-12"
+      className="relative z-40 flex min-h-11 items-center justify-center overflow-hidden bg-banner px-3 py-1.5 text-center md:h-12 md:py-0"
     >
       <p
         key={index}
-        className={`truncate whitespace-nowrap text-[11px] font-semibold text-banner-foreground sm:text-xs md:text-sm ${
+        className={`line-clamp-2 whitespace-normal text-[10px] font-semibold leading-tight text-banner-foreground sm:text-xs md:truncate md:whitespace-nowrap md:text-sm ${
           animate ? "animate-banner-in" : ""
         }`}
       >
