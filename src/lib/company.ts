@@ -12,7 +12,7 @@ export const company = {
   whatsappRaw: "919102266237",
   // Default UPI ID for enrollment payments. Override at runtime on your own
   // server by setting the UPI_ID environment variable (PM2 / .env) — no rebuild needed.
-  upiId: "axonmettechnologies@ptyes",
+  upiId: "axonmet@ptyes",
   // Names the owner has personally verified as enrolled. The announcement
   // banner shows these as "has officially enrolled" — add or edit entries
   // here (name + position) and they appear site-wide.
