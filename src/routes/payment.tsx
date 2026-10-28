@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { createFileRoute } from "@tanstack/react-router";
 import { createFileRoute } from "@tanstack/react-router";
 import { Card } from "@/components/ui/card";
 import {
@@ -99,45 +99,12 @@ function PaymentPage() {
               />
             </div>
 
-            {/* Copy UPI ID & Pay */}
-            <div className="mt-8 mx-auto w-full max-w-md">
-              <div className="flex items-center gap-3 rounded-2xl border border-border/60 bg-background/70 backdrop-blur p-2 pl-5 shadow-elegant">
-                <div className="min-w-0 flex-1 text-left">
-                  <p className="text-[10px] font-medium uppercase tracking-[0.2em] text-muted-foreground">
-                    UPI ID
-                  </p>
-                  <p className="truncate font-mono text-sm md:text-base font-semibold text-foreground">
-                    {upiId}
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  onClick={copyUpi}
-                  className={`inline-flex shrink-0 items-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold transition-colors ${
-                    copied
-                      ? "bg-primary/15 text-primary"
-                      : "bg-primary text-primary-foreground hover:bg-primary/90"
-                  }`}
-                >
-                  {copied ? (
-                    <>
-                      <Check className="h-4 w-4" /> Copied
-                    </>
-                  ) : (
-                    <>
-                      <Copy className="h-4 w-4" /> Copy &amp; Pay
-                    </>
-                  )}
-                </button>
-              </div>
-              <p className="mt-2.5 text-xs text-muted-foreground">
-                Copy the UPI ID and pay your enrollment fees from any UPI app.
-              </p>
+            <div className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-4 py-1.5 text-xs font-semibold">
+              <ShieldCheck className="h-3.5 w-3.5" /> Scan QR Code via Any UPI App then make payment
             </div>
-
-            <div className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary/10 text-primary px-4 py-1.5 text-xs font-semibold">
-              <ShieldCheck className="h-3.5 w-3.5" /> Refer to your Offer Letter for the exact amount
-            </div>
+            <p className="mt-2.5 text-sm text-muted-foreground">
+              Scan QR Code via Any UPI App then make payment.
+            </p>
 
             <div className="mt-6 max-w-2xl mx-auto flex items-start gap-3 rounded-xl border border-border/60 bg-background/60 p-4 text-sm">
               <AlertCircle className="h-5 w-5 shrink-0 text-primary" />
