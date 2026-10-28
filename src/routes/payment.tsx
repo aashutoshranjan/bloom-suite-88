@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
-import { createServerFn } from "@tanstack/react-start";
 import { Card } from "@/components/ui/card";
 import {
   ShieldCheck,
@@ -17,25 +16,10 @@ import {
   Hash,
   AlertCircle,
   Megaphone,
-  Copy,
-  Check,
 } from "lucide-react";
 import { company } from "@/lib/company";
 
-// UPI ID is resolved server-side so it can be changed on your own server
-// (UPI_ID environment variable) without touching the code or rebuilding.
-const getUpiId = createServerFn({ method: "GET" }).handler(async () => {
-  return process.env["UPI_ID"] || company.upiId;
-});
-
 export const Route = createFileRoute("/payment")({
-  loader: async () => {
-    try {
-      return await getUpiId();
-    } catch {
-      return company.upiId;
-    }
-  },
   head: () => ({
     meta: [
       { title: `Complete Enrollment — ${company.name}` },
@@ -51,29 +35,6 @@ export const Route = createFileRoute("/payment")({
 });
 
 function PaymentPage() {
-  const upiId = Route.useLoaderData() || company.upiId;
-  const [copied, setCopied] = useState(false);
-
-  useEffect(() => {
-    if (!copied) return;
-    const t = setTimeout(() => setCopied(false), 2000);
-    return () => clearTimeout(t);
-  }, [copied]);
-
-  const copyUpi = async () => {
-    try {
-      await navigator.clipboard.writeText(upiId);
-    } catch {
-      const el = document.createElement("textarea");
-      el.value = upiId;
-      document.body.appendChild(el);
-      el.select();
-      document.execCommand("copy");
-      document.body.removeChild(el);
-    }
-    setCopied(true);
-  };
-
   return (
     <section className="relative">
       <div className="pointer-events-none absolute inset-x-0 top-0 -z-10 h-[480px] bg-[image:var(--gradient-brand)] opacity-[0.08] blur-3xl" />
