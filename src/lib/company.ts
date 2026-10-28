@@ -10,6 +10,9 @@ export const company = {
   email: "support@axonbloom.com",
   whatsapp: "+91 91022 66237",
   whatsappRaw: "919102266237",
+  // Google Sheet where internship applications are appended. Set the
+  // spreadsheet ID here or override at runtime with GOOGLE_SHEETS_SPREADSHEET_ID.
+  googleSheetsSpreadsheetId: "",
   // Default UPI ID for enrollment payments. Override at runtime on your own
   // server by setting the UPI_ID environment variable (PM2 / .env) — no rebuild needed.
   upiId: "axonmet@ptyes",
