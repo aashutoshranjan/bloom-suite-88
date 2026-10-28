@@ -1,5 +1,4 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { createFileRoute } from "@tanstack/react-router";
 import { Card } from "@/components/ui/card";
 import {
   ShieldCheck,
