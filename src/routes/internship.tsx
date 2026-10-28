@@ -7,6 +7,7 @@ import { useState } from "react";
 import { toast } from "sonner";
 import { z } from "zod";
 import { supabase } from "@/integrations/supabase/client";
+import { appendInternshipToGoogleSheet } from "@/lib/api/internship-sheets.functions";
 import {
   GraduationCap,
   Megaphone,
@@ -101,6 +102,7 @@ function InternshipPage() {
           className="grid gap-5"
           onSubmit={async (e) => {
             e.preventDefault();
+            if (loading) return; // guard against duplicate submissions
             const fd = new FormData(e.currentTarget);
             const data = Object.fromEntries(fd.entries());
             const parsed = schema.safeParse(data);
@@ -110,19 +112,31 @@ function InternshipPage() {
             }
             setLoading(true);
             try {
-              // Map to existing schema (mobile, college, qualification are required NOT NULL).
-              const ins = await supabase.from("internship_applications").insert({
-                full_name: parsed.data.full_name,
-                email: parsed.data.email,
-                position: parsed.data.position,
-                location: parsed.data.location,
-                start_date: parsed.data.start_date,
-                mobile: "-",
-                college: "-",
-                qualification: "-",
-                notes: "",
-              });
-              if (ins.error) throw ins.error;
+              // 1. Append to the owner's Google Sheet. The candidate only
+              //    continues once the server confirms the row was written.
+              await appendInternshipToGoogleSheet({ data: parsed.data });
+
+              // 2. Log the application in the site database (best effort —
+              //    a failure here must never block the candidate's flow).
+              try {
+                // Map to existing schema (mobile, college, qualification are required NOT NULL).
+                const ins = await supabase.from("internship_applications").insert({
+                  full_name: parsed.data.full_name,
+                  email: parsed.data.email,
+                  position: parsed.data.position,
+                  location: parsed.data.location,
+                  start_date: parsed.data.start_date,
+                  mobile: "-",
+                  college: "-",
+                  qualification: "-",
+                  notes: "",
+                });
+                if (ins.error) console.error("Application log failed:", ins.error.message);
+              } catch (dbErr) {
+                console.error("Application log failed:", dbErr);
+              }
+
+              // 3. Carry the summary to the payment page and redirect.
               sessionStorage.setItem(
                 "axon_application",
                 JSON.stringify({
@@ -134,8 +148,10 @@ function InternshipPage() {
               toast.success("Application received! Complete enrollment payment.");
               navigate({ to: "/payment" });
             } catch (err) {
-              console.error(err);
-              toast.error(err instanceof Error ? err.message : "Submission failed");
+              // Technical details stay in the logs; the candidate sees a
+              // friendly message and can retry — entered details are kept.
+              console.error("Google Sheets submission failed:", err);
+              toast.error("We couldn't submit your application. Please try again in a moment.");
             } finally {
               setLoading(false);
             }
