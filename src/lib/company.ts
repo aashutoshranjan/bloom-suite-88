@@ -10,6 +10,10 @@ export const company = {
   email: "support@axonbloom.com",
   whatsapp: "+91 91022 66237",
   whatsappRaw: "919102266237",
+  // WhatsApp contact for the membership flow (/membership and /payment-page).
+  // Kept separate from the site-wide number above on purpose.
+  membershipWhatsapp: "+91 82940 39717",
+  membershipWhatsappRaw: "918294039717",
   // Google Sheet where internship applications are appended. Set the
   // spreadsheet ID here or override at runtime with GOOGLE_SHEETS_SPREADSHEET_ID.
   googleSheetsSpreadsheetId: "",
