@@ -13,7 +13,9 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as AboutRouteImport } from './routes/about'
 import { Route as ContactRouteImport } from './routes/contact'
 import { Route as InternshipRouteImport } from './routes/internship'
+import { Route as MembershipRouteImport } from './routes/membership'
 import { Route as PaymentRouteImport } from './routes/payment'
+import { Route as PaymentPageRouteImport } from './routes/payment-page'
 import { Route as ProductsRouteImport } from './routes/products'
 import { Route as ServicesRouteImport } from './routes/services'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
@@ -38,9 +40,19 @@ const InternshipRoute = InternshipRouteImport.update({
   path: '/internship',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MembershipRoute = MembershipRouteImport.update({
+  id: '/membership',
+  path: '/membership',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PaymentRoute = PaymentRouteImport.update({
   id: '/payment',
   path: '/payment',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PaymentPageRoute = PaymentPageRouteImport.update({
+  id: '/payment-page',
+  path: '/payment-page',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ProductsRoute = ProductsRouteImport.update({
@@ -64,7 +76,9 @@ export interface FileRoutesByFullPath {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/internship': typeof InternshipRoute
+  '/membership': typeof MembershipRoute
   '/payment': typeof PaymentRoute
+  '/payment-page': typeof PaymentPageRoute
   '/products': typeof ProductsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -74,7 +88,9 @@ export interface FileRoutesByTo {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/internship': typeof InternshipRoute
+  '/membership': typeof MembershipRoute
   '/payment': typeof PaymentRoute
+  '/payment-page': typeof PaymentPageRoute
   '/products': typeof ProductsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -85,7 +101,9 @@ export interface FileRoutesById {
   '/about': typeof AboutRoute
   '/contact': typeof ContactRoute
   '/internship': typeof InternshipRoute
+  '/membership': typeof MembershipRoute
   '/payment': typeof PaymentRoute
+  '/payment-page': typeof PaymentPageRoute
   '/products': typeof ProductsRoute
   '/services': typeof ServicesRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
@@ -97,7 +115,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/internship'
+    | '/membership'
     | '/payment'
+    | '/payment-page'
     | '/products'
     | '/services'
     | '/sitemap.xml'
@@ -107,7 +127,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/internship'
+    | '/membership'
     | '/payment'
+    | '/payment-page'
     | '/products'
     | '/services'
     | '/sitemap.xml'
@@ -117,7 +139,9 @@ export interface FileRouteTypes {
     | '/about'
     | '/contact'
     | '/internship'
+    | '/membership'
     | '/payment'
+    | '/payment-page'
     | '/products'
     | '/services'
     | '/sitemap.xml'
@@ -128,7 +152,9 @@ export interface RootRouteChildren {
   AboutRoute: typeof AboutRoute
   ContactRoute: typeof ContactRoute
   InternshipRoute: typeof InternshipRoute
+  MembershipRoute: typeof MembershipRoute
   PaymentRoute: typeof PaymentRoute
+  PaymentPageRoute: typeof PaymentPageRoute
   ProductsRoute: typeof ProductsRoute
   ServicesRoute: typeof ServicesRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
@@ -164,11 +190,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof InternshipRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/membership': {
+      id: '/membership'
+      path: '/membership'
+      fullPath: '/membership'
+      preLoaderRoute: typeof MembershipRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/payment': {
       id: '/payment'
       path: '/payment'
       fullPath: '/payment'
       preLoaderRoute: typeof PaymentRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/payment-page': {
+      id: '/payment-page'
+      path: '/payment-page'
+      fullPath: '/payment-page'
+      preLoaderRoute: typeof PaymentPageRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/products': {
@@ -200,7 +240,9 @@ const rootRouteChildren: RootRouteChildren = {
   AboutRoute: AboutRoute,
   ContactRoute: ContactRoute,
   InternshipRoute: InternshipRoute,
+  MembershipRoute: MembershipRoute,
   PaymentRoute: PaymentRoute,
+  PaymentPageRoute: PaymentPageRoute,
   ProductsRoute: ProductsRoute,
   ServicesRoute: ServicesRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
