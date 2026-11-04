@@ -274,7 +274,7 @@ function Home() {
             {[
               { q: "How quickly can we start?", a: "Most engagements kick off within 1–2 weeks of signing." },
               { q: "Do you work on fixed-bid or T&M?", a: "Both. We recommend a discovery sprint, then choose the right model." },
-              { q: "Where is your team based?", a: "Headquartered in Hyderabad, India, with delivery across timezones." },
+              { q: "Where is your team based?", a: "Headquartered in Bengaluru, India, with delivery across timezones." },
               { q: "Can you sign NDAs / DPAs?", a: "Absolutely — standard process before any technical discussion." },
               { q: "Do you support long-term maintenance?", a: "Yes — SLAs, SRE, and on-call coverage are part of our offerings." },
             ].map((f, i) => (

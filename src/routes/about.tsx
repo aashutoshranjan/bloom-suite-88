@@ -51,7 +51,7 @@ function AboutPage() {
               that move the needle.
             </p>
             <p className="mt-4 text-muted-foreground">
-              Headquartered in Hyderabad, India, we serve startups, scale-ups, and Fortune-class enterprises
+              Headquartered in Bengaluru, India, we serve startups, scale-ups, and Fortune-class enterprises
               across BFSI, healthcare, retail, education, manufacturing, and SaaS.
             </p>
           </div>

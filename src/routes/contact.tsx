@@ -14,7 +14,7 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: `Contact — ${company.name}` },
-      { name: "description", content: `Talk to ${company.name}. Office in Hyderabad. Email ${company.email}, WhatsApp ${company.whatsapp}.` },
+      { name: "description", content: `Talk to ${company.name}. Office in Bengaluru. Email ${company.email}, WhatsApp ${company.whatsapp}.` },
       { property: "og:title", content: `Contact — ${company.name}` },
       { property: "og:description", content: "Reach our team for a tailored proposal." },
       { property: "og:url", content: `${company.url}/contact` },
@@ -100,7 +100,7 @@ function ContactPage() {
             <div className="aspect-[16/8] w-full bg-[image:var(--gradient-soft)] grid place-items-center text-muted-foreground">
               <iframe
                 title="Office location"
-                src="https://www.google.com/maps?q=Telecom+Nagar+Gachibowli+Hyderabad&output=embed"
+                src="https://www.google.com/maps?q=Electronic+City+Phase+2+Bengaluru+Karnataka+560099&output=embed"
                 className="h-full w-full border-0"
                 loading="lazy"
               />
