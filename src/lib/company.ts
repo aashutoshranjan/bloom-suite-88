@@ -1,12 +1,12 @@
 // Centralized company information — edit this file to update site-wide content.
 export const company = {
-  name: "Axonmet Technologies",
-  shortName: "Axonmet",
+  name: "Axonaspire Metrics",
+  shortName: "Axonaspire",
   domain: "axonbloom.com",
   url: "https://axonbloom.com",
   tagline: "Innovating Tomorrow's Digital Future",
   description:
-    "Axonmet Technologies builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
+    "Axonaspire Metrics builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
   email: "support@axonbloom.com",
   whatsapp: "+91 91022 66237",
   whatsappRaw: "919102266237",

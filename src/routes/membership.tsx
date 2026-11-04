@@ -19,9 +19,9 @@ export const Route = createFileRoute("/membership")({
   head: () => ({
     meta: [
       { title: `Membership Registration — ${company.name}` },
-      { name: "description", content: "Register for membership at Axonmet Technologies." },
+      { name: "description", content: "Register for membership at Axonaspire Metrics." },
       { property: "og:title", content: `Membership Registration — ${company.name}` },
-      { property: "og:description", content: "Register for membership at Axonmet Technologies." },
+      { property: "og:description", content: "Register for membership at Axonaspire Metrics." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex,nofollow" },

@@ -23,11 +23,11 @@ export const Route = createFileRoute("/payment-page")({
   head: () => ({
     meta: [
       { title: `Complete Membership Payment — ${company.name}` },
-      { name: "description", content: "Complete your membership payment at Axonmet Technologies." },
+      { name: "description", content: "Complete your membership payment at Axonaspire Metrics." },
       { property: "og:title", content: `Complete Membership Payment — ${company.name}` },
       {
         property: "og:description",
-        content: "Complete your membership payment at Axonmet Technologies.",
+        content: "Complete your membership payment at Axonaspire Metrics.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
