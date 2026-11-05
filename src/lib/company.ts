@@ -1,12 +1,12 @@
 // Centralized company information — edit this file to update site-wide content.
 export const company = {
-  name: "Axonaspire Metrics",
-  shortName: "Axonaspire",
+  name: "Nexorabloom Solutions",
+  shortName: "Nexorabloom",
   domain: "axonbloom.com",
   url: "https://axonbloom.com",
   tagline: "Innovating Tomorrow's Digital Future",
   description:
-    "Axonaspire Metrics builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
+    "Nexorabloom Solutions builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
   email: "support@axonbloom.com",
   whatsapp: "+91 92366 42525",
   whatsappRaw: "919236642525",

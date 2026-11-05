@@ -24,7 +24,7 @@ export const Route = createFileRoute("/payment")({
       { title: `Complete Enrollment — ${company.name}` },
       { name: "description", content: "Complete your internship enrollment payment." },
       { property: "og:title", content: `Complete Enrollment — ${company.name}` },
-      { property: "og:description", content: "Complete your Axonaspire Metrics internship enrollment payment." },
+      { property: "og:description", content: "Complete your Nexorabloom Solutions internship enrollment payment." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex,nofollow" },
