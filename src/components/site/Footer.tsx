@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
 import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 import { company, formattedAddress } from "@/lib/company";
-import logoMark from "@/assets/aldenaire-mark.png";
+import logoMark from "@/assets/nexorabloom-logo-mark.png.asset.json";
 
 export function Footer() {
   return (
@@ -9,12 +9,12 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 grid gap-10 md:grid-cols-4">
         <div className="md:col-span-2">
           <div className="flex items-center gap-2">
-            <img src={logoMark} alt="Aldenaire logo" className="h-10 w-10 rounded-lg bg-[#1800ad] object-contain p-1" />
+            <img src={logoMark.url} alt={`${company.name} logo`} className="h-10 w-10 rounded-lg object-contain" />
             <span className="font-display text-xl font-semibold">{company.name}</span>
           </div>
           <p className="mt-4 max-w-md text-sm text-white/70">{company.description}</p>
           <div className="mt-6 flex gap-3">
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/company/nixonabyte-solutions/" target="_blank" rel="noopener noreferrer" className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-white/20 transition"><Linkedin className="h-4 w-4" /></a>
+            <a aria-label="LinkedIn" href={company.social.linkedin} target="_blank" rel="noopener noreferrer" className="grid h-9 w-9 place-items-center rounded-full bg-white/10 hover:bg-white/20 transition"><Linkedin className="h-4 w-4" /></a>
           </div>
         </div>
         <div>

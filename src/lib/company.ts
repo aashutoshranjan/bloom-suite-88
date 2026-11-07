@@ -7,13 +7,13 @@ export const company = {
   tagline: "Innovating Tomorrow's Digital Future",
   description:
     "Nexorabloom Solutions builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
-  email: "support@axonbloom.com",
-  whatsapp: "+91 92366 42525",
-  whatsappRaw: "919236642525",
+  email: "Support.nexora@axonbloom.com",
+  whatsapp: "+91-8294039717",
+  whatsappRaw: "918294039717",
   // WhatsApp contact for the membership flow (/membership and /payment-page).
   // Kept separate from the site-wide number above on purpose.
-  membershipWhatsapp: "+91 92366 42525",
-  membershipWhatsappRaw: "919236642525",
+  membershipWhatsapp: "+91-8294039717",
+  membershipWhatsappRaw: "918294039717",
   // Google Sheet where internship applications are appended. Set the
   // spreadsheet ID here or override at runtime with GOOGLE_SHEETS_SPREADSHEET_ID.
   googleSheetsSpreadsheetId: "",
@@ -57,16 +57,16 @@ export const company = {
     { name: "Payal Verma", position: "Graduate Engineer" },
   ],
   address: {
-    line1: "34E, 2nd Main Rd, Vinayaka Layout",
-    line2: "Shanthipura, Phase II, Electronic City, Bhovi Palya",
-    city: "Bengaluru",
-    state: "Karnataka",
-    pin: "560099",
+    line1: "K33/7, White Field Rd, Kondapur",
+    line2: "Venkat Enclave, Whitefields, HITEC City",
+    city: "Hyderabad",
+    state: "Telangana",
+    pin: "500084",
     country: "India",
   },
   hours: "Mon – Sat, 9:30 AM – 7:00 PM IST",
   social: {
-    linkedin: "#",
+    linkedin: "https://www.linkedin.com/company/clinch-fusion-bridge/home/",
     twitter: "#",
     github: "#",
     instagram: "#",
