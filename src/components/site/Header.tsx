@@ -3,7 +3,6 @@ import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { company } from "@/lib/company";
-import logoMark from "@/assets/nexorabloom-logo-mark.png.asset.json";
 
 const nav = [
   { to: "/", label: "Home" },
@@ -19,7 +18,7 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/50 glass">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 group">
-          <img src={logoMark.url} alt={`${company.name} logo`} className="h-9 w-9 rounded-lg object-contain shadow-glow transition-transform group-hover:scale-105" />
+          <img src="/nexorabloom-nb-logo.png" alt={`${company.name} NB logo`} width={40} height={40} className="h-9 w-9 rounded-lg object-contain shadow-glow transition-transform group-hover:scale-105" />
           <span className="font-display text-lg font-semibold tracking-tight">{company.shortName}<span className="text-muted-foreground font-normal"> Solutions</span></span>
         </Link>
         <nav className="hidden md:flex items-center gap-1">

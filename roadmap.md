@@ -1,0 +1,3 @@
+- [ ] Update the current logo to an NB mark and make the logo load reliably on self-hosted deployments.
+- [ ] Complete basic Google SEO foundations for the requested Nexorabloom site, including route metadata, crawl rules, sitemap, structured data, page headings, and image alt text.
+- [ ] Verify the resulting source, SEO endpoints, and build; commit the completed changes.

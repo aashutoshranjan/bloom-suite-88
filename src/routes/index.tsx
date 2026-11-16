@@ -11,11 +11,12 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: `${company.name} — ${company.tagline}` },
-      { name: "description", content: "Enterprise software, AI, cloud, and digital transformation by Nexorabloom Solutions." },
+      { name: "description", content: "Nexorabloom Solutions delivers enterprise software development, AI solutions, cloud platforms, and digital transformation for ambitious businesses." },
       { property: "og:title", content: `${company.name} — ${company.tagline}` },
       { property: "og:description", content: company.description },
       { property: "og:url", content: `${company.url}/` },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: company.name },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [{ rel: "canonical", href: `${company.url}/` }],
@@ -103,8 +104,8 @@ function Home() {
               <Sparkles className="h-3.5 w-3.5" /> Enterprise Technology Partner
             </span>
             <h1 className="mt-5 font-display text-5xl md:text-7xl font-bold leading-[1.05]">
-              {company.tagline.split("'s")[0]}'s<br />
-              <span className="text-gradient bg-clip-text">Digital Future</span>
+              Enterprise Software, AI &amp;<br />
+              <span className="text-gradient bg-clip-text">Cloud Solutions</span>
             </h1>
             <p className="mt-6 max-w-2xl text-lg text-white/75">
               {company.name} partners with ambitious teams to design, engineer, and operate

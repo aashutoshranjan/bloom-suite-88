@@ -1,8 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /internship
-Disallow: /payment
-Disallow: /membership
-Disallow: /payment-page
 
-Sitemap: https://axonbloom.com/sitemap.xml
+Sitemap: https://nexorabloom.axonbloom.com/sitemap.xml

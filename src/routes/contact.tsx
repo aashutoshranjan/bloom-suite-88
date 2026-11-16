@@ -14,12 +14,15 @@ export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
       { title: `Contact — ${company.name}` },
-      { name: "description", content: `Talk to ${company.name}. Office in Hyderabad. Email ${company.email}, WhatsApp ${company.whatsapp}.` },
+      { name: "description", content: `Contact ${company.name} about enterprise software, AI, and cloud projects. Email ${company.email} or WhatsApp ${company.whatsapp}.` },
       { property: "og:title", content: `Contact — ${company.name}` },
       { property: "og:description", content: "Reach our team for a tailored proposal." },
       { property: "og:url", content: `${company.url}/contact` },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: company.name },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: `Contact ${company.name}` },
+      { name: "twitter:description", content: `Reach ${company.name} for enterprise software, AI, and cloud project inquiries.` },
     ],
     links: [{ rel: "canonical", href: `${company.url}/contact` }],
   }),

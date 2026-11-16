@@ -2,8 +2,8 @@
 export const company = {
   name: "Nexorabloom Solutions",
   shortName: "Nexorabloom",
-  domain: "axonbloom.com",
-  url: "https://axonbloom.com",
+  domain: "nexorabloom.axonbloom.com",
+  url: "https://nexorabloom.axonbloom.com",
   tagline: "Innovating Tomorrow's Digital Future",
   description:
     "Nexorabloom Solutions builds enterprise software, AI solutions, cloud platforms, and digital transformation programs for ambitious businesses.",
