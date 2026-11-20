@@ -1,3 +1,4 @@
 - [ ] Update the current logo to an NB mark and make the logo load reliably on self-hosted deployments.
 - [ ] Complete basic Google SEO foundations for the requested Nexorabloom site, including route metadata, crawl rules, sitemap, structured data, page headings, and image alt text.
+- [ ] Create the hidden `/internship-programs` experience with searchable 44-track catalog, program details, enrollment form, payment handoff, and minimal footer.
 - [ ] Verify the resulting source, SEO endpoints, and build; commit the completed changes.
